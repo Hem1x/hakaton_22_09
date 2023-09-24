@@ -40,7 +40,7 @@ const CVwebcam = () => {
   };
 
   useEffect(() => {
-    const timer = setInterval(captureFrameAndSend, 1000);
+    const timer = setInterval(captureFrameAndSend, 500);
     return () => clearInterval(timer);
   }, []);
 
