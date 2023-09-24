@@ -13,6 +13,12 @@ const CvObject = ({ data, className, width, height }) => {
     ctx.strokeStyle = color;
     ctx.fillStyle = color;
 
+    ctx.fillRect(
+      width * data.x - (data.width * width) / 2,
+      height * data.y - (data.height * height) / 2 - 20,
+      width * data.width,
+      20,
+    );
     ctx.strokeRect(
       width * data.x - (data.width * width) / 2,
       height * data.y - (data.height * height) / 2,
@@ -23,10 +29,10 @@ const CvObject = ({ data, className, width, height }) => {
     console.log(ctx);
 
     // Добавляем текст с информацией о классе и уверенности
-    ctx.fillStyle = '#000';
+    ctx.fillStyle = '#fff';
     ctx.font = '16px Arial';
     ctx.fillText(
-      data.class + ' ' + confidence,
+      '  ' + data.class + ', ' + confidence,
       width * data.x - (data.width * width) / 2,
       height * data.y - (data.height * height) / 2 - 3,
     );
