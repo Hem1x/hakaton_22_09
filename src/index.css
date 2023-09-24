@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+canvas {
+  display: inline-block;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: 'Roboto';
+  margin: 0;
+  padding: 0;
+  background-color: #f7f9fc;
+}
+
+input {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0); /*Цвет скролла*/
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #fe8f1e; /*Цвет ползунка*/
+}
+
+::-webkit-scrollbar {
+  width: 0px; /*Толщина скролла*/
+}
